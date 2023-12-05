@@ -9,10 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface CampeonatoRepository extends JpaRepository<Campeonato, Long> {
-    List<Campeonato> findById(long id);
 
-    @Query("SELECT c FROM Campeonato c")
-    Page<Campeonato> findAllWithPagination(Pageable pageable);
 }
 
 

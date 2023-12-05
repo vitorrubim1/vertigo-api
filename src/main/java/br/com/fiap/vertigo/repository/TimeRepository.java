@@ -11,9 +11,6 @@ import java.util.List;
 
 
 public interface TimeRepository extends JpaRepository<Time, Long> {
-    List<Time> findById(long id);
 
-    @Query("SELECT t FROM Time t")
-    Page<Time> findAllWithPagination(Pageable pageable);
 }
 

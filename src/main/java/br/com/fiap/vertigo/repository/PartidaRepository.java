@@ -12,10 +12,5 @@ import java.util.List;
 
 
 public interface PartidaRepository extends JpaRepository<Partida, Long> {
-    List<Partida> findById(long id);
 
-    @Query("SELECT p FROM Partida p WHERE p.data_partida = :dataPartida")
-    Page<Partida> findByDataPartida(
-            @Param("dataPartida") LocalDateTime dataPartida,
-            Pageable pageable);
 }
